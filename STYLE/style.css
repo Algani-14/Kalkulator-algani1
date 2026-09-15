@@ -1,0 +1,670 @@
+
+@font-face {
+    font-family: 'class-bold';
+    src: url(Fonts/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: 'class-semibold';
+    src: url(Fonts/ClashDisplay-Semibold.otf);
+}
+@font-face {
+    font-family: 'class-medium';
+    src: url(Fonts/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: 'class-regular';
+    src: url(Fonts/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: 'class-light';
+    src: url(Fonts/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: 'class-extralight';
+    src: url(Fonts/ClashDisplay-Extralight.otf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus, .btn0:focus {
+    outline: none;
+}
+
+/* input ERROR */
+    @keyframes getar {
+        0% { transform: translate(1px, 1px); }
+        10% { transform: translate(-1px, -2px); }
+        20% { transform: translate(-3px, 0px); }
+        30% { transform: translate(3px, 2px); }
+        40% { transform: translate(1px, -1px); }
+        50% { transform: translate(-1px, 2px); }
+        60% { transform: translate(-3px, 1px); }
+        70% { transform: translate(3px, 1px); }
+        80% { transform: translate(-1px, -1px); }
+        90% { transform: translate(1px, 2px); }
+        100% { transform: translate(1px, -2px); }
+
+        0%, 100% { 
+            transform: translate(0, 0);
+            box-shadow: 0px 20px 0px 5px #860000, 5px 0px 0px 0px #860000, -5px 0px 0px 0px #860000;
+        }
+        10%, 50%, 90% { 
+            transform: translate(-4px, 0); 
+            box-shadow: 0px 20px 0px 5px #860000, 5px 0px 0px 0px #860000, -5px 0px 0px 0px #860000;
+        }
+        30%, 70% { 
+            transform: translate(4px, 0); 
+            box-shadow: 0px 20px 0px 5px #860000, 5px 0px 0px 0px #860000, -5px 0px 0px 0px #860000;
+        }
+    }
+
+    .layar.getar-aktif, .layar.getar-aktif:hover {
+        animation: getar 0.5s ease-out !important;
+        animation-iteration-count: 1;
+        position: relative;
+
+        transition: none !important;
+
+        background: 
+            linear-gradient(black 50%,#10281b) padding-box,
+            linear-gradient(#ff82bc 0%,#860000 10%,#860000 90%,#ff82bc 100%) border-box !important;
+        background-size: 100% 200%, 100% 100% !important;
+        background-position: top,top !important;
+        background-clip: padding-box, border-box !important;
+
+        
+    }
+
+/* TRANSISI */
+    @keyframes efekmuncul {
+        0% {
+            opacity: 0;
+            transform: scale(0.97);
+        }
+        60% {
+            opacity: 0.6;
+            transform: scale(1.03)
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .layar-kuadrat {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.5s 1 forwards;
+    }
+    .nama0 {
+        opacity: 0;
+        animation: efekmuncul 0.6s ease-in-out 0.5s forwards;
+    }
+    .btn0 {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.7s forwards;
+    }
+    /* STEP1234 */
+    .nama1, .nama2, .nama3,.nama4 {
+
+        animation: efekmuncul 0.5s ease-in-out forwards;
+    }
+    .inputAwal, .inputNama, .inputPengeluaran, .sisa {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.2s forwards;
+    }
+    .btn1 {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.3s forwards;
+    }
+    /* ASIDE  */
+    .nama5 {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.3s forwards;
+    }
+    .isiinfo {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.4s forwards;
+    }
+    .satu {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.5s forwards;
+    }
+    .dua {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.6s forwards;
+    }
+    .tiga {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.7s forwards;
+    }
+    .teksanimasi {
+        opacity: 0;
+        animation: efekmuncul 0.5s ease-in-out 0.5s forwards;
+    }
+    .teksanimasi:hover {
+        color: #82ffaa;
+    }
+
+/* ANIMASI GARIS */
+@keyframes slide {
+    0% {
+        width: 0rem;
+        opacity: 0;
+    }
+    70% {
+        width: 19.52rem;
+        opacity: 0.7;
+    }
+    100% {
+        width: 18.52rem;
+        opacity: 1;
+    }
+}
+.jarak {
+    opacity: 0;
+    
+    animation: slide 0.5s ease-in-out 0.3s forwards;
+    width: 18.52rem;
+}
+
+/* ANIMASI ASIDE     */
+@keyframes munculaside {
+    0% {
+        height: 0rem;
+    }
+    70% {
+        height: 14.5rem;
+    }
+    100% {
+        height: 13.5rem;
+    }
+}
+@keyframes munculasidefull {
+    0% {
+        height: 13.5rem;
+    }
+    70% {
+        height: 23rem;
+    }
+    100% {
+        height: 22rem;
+    }
+}
+@keyframes goyang {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 2px); }
+    100% { transform: translate(1px, -2px); } 
+}
+.info.infoerror {
+    animation: goyang 0.4s ease-in-out forwards;
+    position: relative;
+}
+.info.infomasuk {
+    animation: munculaside 0.4s ease-in-out 0.2s forwards;
+    position: relative;
+}
+.info.tambahan {
+    animation: munculasidefull 0.4s ease-in-out 0.2s forwards;
+    height: 22rem;
+}
+/* ANIMASI BAYANGAN LAYAR */
+@keyframes bayanganmuncul {
+            0% {
+                box-shadow:
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655;
+            background-position: bottom, top;
+            }
+            70% {
+                box-shadow:
+                0px 30px 0px 5px #008655,
+                5px 0px 0px 0px #008655,
+                -5px 0px 0px 0px #008655;
+            background-position: bottom, top;
+            }
+            100% {
+                box-shadow:
+                0px 20px 0px 5px #008655,
+                5px 0px 0px 0px #008655,
+                -5px 0px 0px 0px #008655;
+            background-position: bottom, top;
+            }
+        }
+@keyframes bayanganbalik {
+            0% {
+                box-shadow:
+                0px 20px 0px 5px #008655,
+                5px 0px 0px 0px #008655,
+                -5px 0px 0px 0px #008655;
+            background-position: bottom, top;
+            }
+            100% {
+                box-shadow:
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655;
+            background-position: bottom, top;
+            }
+        }
+@keyframes bayanganpermanen {
+    100% {
+        box-shadow:
+            0px 20px 0px 5px #008655,
+            5px 0px 0px 0px #008655,
+            -5px 0px 0px 0px #008655;
+        background-position: bottom, top;
+    }
+}
+@keyframes infopermanen {
+    100% {
+        height: 13.5rem;
+    }
+}
+
+/* ANIMASI YAYAR GESER */
+@keyframes menghilang {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% { 
+        opacity: 0;
+        transform: scale(0.97);
+    }
+}
+@keyframes muncul {
+    0% { 
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    80% {
+        opacity: 0.8;
+        transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+main.mainhilang {
+    animation: menghilang 0.3s ease-in-out forwards;
+}
+main.mainmuncul {
+    animation: muncul 0.3s ease-in-out forwards;
+}
+
+
+/* STYLE UTAMA --------------------------------------------------------------------------------------*/
+    body {
+        display: flex;
+        flex-direction: row-reverse;  
+        justify-content: center; 
+        align-items: center;
+        min-height: 100dvh;  
+        background: linear-gradient(black 20%,#00160c 75%,#007a54 100%); 
+        background-size: 100% 200%;
+        background-position: top;
+        overflow-x: hidden;   
+        
+        transition: 0.7s ease-out;
+    }
+    body:has(.layar:hover) {
+                background-position:bottom;
+            }
+    body.body-permanen {
+        background-position: bottom;
+    }
+    body.body-marah {
+        background: linear-gradient(black 20%,#160000 75%,#7a0000 100%)
+    }
+
+    /* MAIN------------------------------------------------------------------------------------------- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .layar {
+            width: 34rem;
+            height: 20rem;
+            border: 7px solid transparent;
+            background:
+                linear-gradient(black 50%,#10281b) padding-box,
+                linear-gradient(#82ffef 0%,#008655 10%,#008655 90%,#82ffef 100%) border-box;
+                background-size: 100% 200%, 100% 100%;
+                background-position: top,top;
+                background-clip: padding-box, border-box;
+        
+            border-radius: 50px;
+            box-shadow: 
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655,
+                0px 0px 0px 0px #008655;
+            -webkit-box-reflect: below px linear-gradient(
+                to bottom, 
+                rgba(0, 0, 0, 0) 72%, 
+                rgba(0, 0, 0, 0.2) 100%
+            );
+
+            display: flex;
+            align-items: center;
+            animation: bayanganbalik 0.4s ease-out forwards;
+            transition: 0.4s ease-in-out;
+        }
+        
+        .layar:hover {
+            animation: bayanganmuncul 0.4s ease-out forwards;
+            transform: scale(1.02);
+        }
+        .layar.layar-animasi {
+            animation: bayanganmuncul 0.4s ease-out forwards;
+        }
+        .layar.layar-permanen {
+            animation: bayanganpermanen 0s ease-out forwards;
+        }
+
+        /* STEP 0 */
+            .step0, .step1, .step2, .step3, .step4 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            .nama0 {
+                color:#d8f2e7 ;
+                font-size: 62px;
+                font-family: 'class-bold';
+                letter-spacing: 3px;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 0.8;
+            }
+            .btn0 {
+                font-family: 'class-bold';
+                font-size: 13px;
+                color: #006444; 
+                width: 8.6rem;
+                height: 2.7rem;
+                border: 0.2rem solid white;
+                border-radius: 999px;
+
+                background: linear-gradient(to bottom, white 0%,white 50%,#80d7b8 100%);
+                background-size: 100% 200%;
+                background-position: bottom;
+
+                letter-spacing: 1px;
+                box-shadow: 
+                    0 0 1px 1px #ffffff,
+                    0 0 5px 2px rgba(255, 255, 255, 0.5);
+                margin-top: 1.7rem;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn0:hover{
+                background-position:top;
+                transform: scale(1.02)
+            }
+
+        /* STEP1,2,3 */
+            .nama1, .nama2, .nama3 {
+                color:#d8f2e7 ;
+                font-size: 30px;
+                font-family: 'class-bold';
+                letter-spacing: 2px;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 0.8;
+            }
+            .input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+            }
+            .inputAwal, .inputNama, .inputPengeluaran {
+                width: 27rem;
+                height: 3rem;
+                border: 2px solid #d8f2e7;
+                border-radius: 999px;
+                background: transparent;
+                text-align: center;
+
+                color: #82ffef;
+                font-size: 20px;
+                font-family: 'class-regular';
+                outline: none;
+            }
+            .inputAwal::-webkit-outer-spin-button,
+            .inputAwal::-webkit-inner-spin-button, 
+            .inputNama::-webkit-outer-spin-button,
+            .inputNama::-webkit-inner-spin-button,
+            .inputPengeluaran::-webkit-outer-spin-button,
+            .inputPengeluaran::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            
+            .btn1, .btn2, .btn3 {
+                font-family: 'class-bold';
+                font-size: 13px;
+                color: #006444; 
+                width: 8.6rem;
+                height: 2.7rem;
+                border: solid white;
+                border-radius: 999px;
+                background: linear-gradient(to bottom, white 0%,white 50%,#80d7b8 100%);
+                background-size: 100% 200%;
+                background-position: bottom;
+                letter-spacing: 1px;
+                box-shadow: 
+                    0 0 1px 1px #ffffff,
+                    0 0 5px 2px rgba(255, 255, 255, 0.5);
+                margin-top: 1.7rem;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                
+            }
+            .btn1:hover, .btn2:hover, .btn3:hover {
+                background-position:top;
+                transform: scale(1.02)
+            }
+
+        /* STEP4 */
+            .nama4 {
+                color:#d8f2e7 ;
+                font-size: 45px;
+                font-family: 'class-bold';
+                letter-spacing: 3px;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 0.8;
+                margin: 20px;
+            }
+            .sisa {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                transition: 0.4s ease-in-out;
+            }
+            .sisaSaldo, .Rp {
+                color:#82ffaa; ;
+                font-size: 40px;
+                font-family: 'class-regular';
+                letter-spacing: 3px;
+                transition: 0.4s ease-in-out;
+            }
+            .sisaSaldo:hover, .Rp:hover {
+                transform: scale(1.1);
+            }
+
+        /* ERROR */
+            .error1, .error2, .error3 {
+                color:#ff0000 ;
+                font-size: 10px;
+                font-family: 'class-regular';
+                letter-spacing: 1px;
+                margin-top: 10px;
+                margin-bottom: -15px;
+
+                visibility: hidden;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .error1.active, .error2.active, .error3.active  {
+                visibility: visible;
+            }
+        
+
+    /* ARTICLE--------------------------------------------------------------------------------- */
+
+        article {
+            display: flex;
+        }
+        .info {
+            width: 23rem;
+            height: 0rem;
+            background-color: black;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            background:
+                linear-gradient(black,black) padding-box,
+                linear-gradient(#c3c3c3 0%,#474747 10%,#474747 90%,#c3c3c3 100%) border-box;
+            color: #e5e5e5;
+            margin-top: 1.2rem;
+            
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+            transition: all 0.4s ease-in-out;
+        }
+        .info:hover {
+            transform: scale(1.02);
+        }
+
+        .nama5 {
+            font-size: 30px;
+            font-family: 'class-bold';
+            letter-spacing: 2px;
+            margin-top: 2.5rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .isiinfo {
+            font-size: 15px;
+            font-family: 'class-regular';
+            letter-spacing: 1px;
+            gap: 0.5rem;
+            margin: 2rem;
+            margin-right: 2rem;
+            object-fit: cover;
+            
+
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        article td {
+            text-align: right;
+        }
+        article td:hover {
+            color: #82ffaa;
+        }
+
+        .jarak {
+            background-color: #e5e5e5;
+            height: 1px;
+            width: 0rem;
+            border-radius: 999px;
+            margin: 2rem;
+            color: transparent;
+        
+            display: none;
+        }
+        
+        .daftarTransaksi {
+            list-style: none;
+            font-size: 12px;
+            font-family: 'class-extralight';
+            letter-spacing: 1px;
+            margin: 2rem;
+            line-height: 1.8;
+
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+        }
+
+    /* SELEKSI USER */
+    .btn0, .btn1,.btn2, .btn3,.nama0, .nama1, .nama2, .nama3,
+    .nama4,.jarak, input, .error1, .error2, .error3 {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    @media screen and (max-width: 1210px) {
+
+        main {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        margin: auto;
+        }
+
+    .layar {
+        width: 70vw;
+        max-width: 34rem;
+    }
+
+    .info {
+        width: 70vw;
+        max-width: 23rem;
+    }
+
+    .inputAwal, .inputNama, .inputPengeluaran {
+        width:55vw;
+        max-width: 27rem;
+    }
+}
+
+
+    
